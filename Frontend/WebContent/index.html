@@ -1,0 +1,186 @@
+<html ng-app="myApp">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  
+<link rel="stylesheet" href="resources/css/homeheader.css">
+
+<style>
+
+
+
+body {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+}
+
+}
+
+input#button {
+	background: #3CB371;
+	color: #fff;
+	border: 1px solid #00FF7F;
+	border-radius: 20px;
+	width: 150px;
+	padding: 10px;
+	box-shadow: 5px 5px 5px #eee;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+input#button:after {
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+input#button:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+</style>
+
+</head>
+<body>
+
+	
+	<div class="navbar navbar-fixed-top" role="navigation">
+
+		<div class="navbar-header">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">SocialNetwork</a>
+			</div>
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav pull-left">
+				<li><a href="#/">Home</a></li>
+				<li><a href="#/about">About Us</a></li>
+				<li><a href="#/contact">Contact Us</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav pull-right">
+				<li><a href="#/login">Sign In</a></li>
+				<li><a href="#/register">Sign Up</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="navbar navbar-static-top" role="navigation"
+		style="background-color: #3F4B7F; font-color: #E6E8F5">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse">
+
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a href="#/list_blog"
+					class="dropdown-toggle" data-toggle="dropdown">Blog <b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/list_blog">Create Blog</a></li>
+						<li class="divider"></li>
+						<li><a href="#/my_blog">My Blogs</a></li>
+					</ul></li>
+					<li class="dropdown"><a href="#/list_forum"
+					class="dropdown-toggle" data-toggle="dropdown">Forum<b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/create_forum">Create Forum</a></li>
+						<li class="divider"></li>
+						<li><a href="#/my_forum">My Forum</a></li>
+					</ul></li>
+					<li class="dropdown"><a href="#/list_job"
+					class="dropdown-toggle" data-toggle="dropdown">Jobs<b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/create_job">Create Job</a></li>
+						<li class="divider"></li>
+						<li><a href="#/my_job">My Job</a></li>
+					</ul></li>
+					<li class="dropdown"><a href="#/list_event"
+					class="dropdown-toggle" data-toggle="dropdown">Events<b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/create_event">Create Event</a></li>
+						<li class="divider"></li>
+						<li><a href="#/my_event">My Event</a></li>
+					</ul></li>
+				
+			</ul>
+			<button type="button" class="btn btn-default navbar-btn">Button</button>
+			<div class="col-sm-3 col-md-3 pull-right">
+				<div class="navbar-text">Text</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="container">
+
+		<div class="text-center">
+			<h1></h1>
+			<p class="lead"></p>
+		</div>
+
+
+<br><br>
+<div ng-view></div>
+
+
+<script src="app.js"></script>
+<script src="c_home/HomeController.js"></script>
+ <script src="c_home/HomeController.js"></script>
+ <script src="c_user/UserController.js"></script>
+ <script src="c_user/UserService.js"></script>
+ <script src="c_blog/BlogController.js"></script>
+ <script src="c_blog/BlogService.js"></script>
+ <script src="c_event/EventController.js"></script>
+ <script src="c_event/EventService.js"></script> 
+ <script src="c_forum/ForumController.js"></script>
+ <script src="c_forum/ForumService.js"></script>
+ <script src="c_friend/FriendController.js"></script>
+ <script src="c_friend/FriendService.js"></script>
+ <script src="c_job/JobController.js"></script>
+ <script src="c_job/JobService.js"></script>
+ <script src="c_chat/ChatController.js"></script>
+ <script src="c_chat/ChatService.js"></script>
+ 
+ <script src="resources/libs/sockjs/sockjs.js"></script>
+ <script src="resources/libs/stomp-websocket/lib/stomp.js"></script>
+
+</body>
+</html>

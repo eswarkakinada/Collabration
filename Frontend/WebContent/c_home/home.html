@@ -1,0 +1,23 @@
+<div ng-controller="HomeController as ctrl">
+
+<div ng-hide="currentUser==''">
+<div class="nav navbar-nav navbar-left">Welcome:
+{{currentUser.user_name}}</div>
+
+<div class="nav navbar-nav navbar-right">You logged in as:
+{{currentUser.role}}</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-4" ng-controller="HomeController">
+<img src="/lib/images/business-meetings.jpg"/>
+    <img ng-src="{{image}}"/><!-- <img src="/WEB-INF" height="200" width="300"> -->
+<h3 class="bg-primary">Jobs	</h3>
+<p>You can view jobs here</p>
+
+</div>
+</div>
+</div>
+</div>
+

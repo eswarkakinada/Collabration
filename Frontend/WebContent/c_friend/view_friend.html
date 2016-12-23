@@ -1,0 +1,32 @@
+<div class="container" ng-controller="FriendController as ctrl">
+
+<p>
+<p>
+<p>
+<p>
+
+
+<p>
+<p>
+<p>
+<p>
+
+<div class="form-group has-feedback"></div>
+Search for friend
+
+<p><input type="text" ng-model="ctrl.friend.friend_name"></p>
+
+<div ng-repeat="friend in ctrl.friends | filter:ctrl.friend.friend_name">
+
+<fieldset>
+
+<legend></legend>
+
+<p>Name:{{friend.friend_name}} &nbsp;&nbsp;&nbsp; Status:{{friend.request_status}}
+<a href="#/chat">Send Message</a>
+
+</p>
+</fieldset>
+</div>
+</div>
+

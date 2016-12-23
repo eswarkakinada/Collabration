@@ -1,0 +1,21 @@
+<p>
+<p>
+<p>
+<div ng-controller="ChatController" class="container">
+
+<p>
+<p>
+<p>
+<p>
+<form ng-submit="addMessage()" name="messageForm">
+<input type="text" placeholder="Compose a new message..." ng-model="message">
+<div class="info">
+<button>Send</button>
+</div>
+</form>
+
+<p ng-repeat="message in messages | orderBy:'time':true" class="message"> 
+<time>{{message.time | date:'HH:mm'}}</time>
+<span ng-class="{self:message.self}">{{message.message}}</span>
+</p>
+</div>

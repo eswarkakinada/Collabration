@@ -1,0 +1,15 @@
+<div class="container" ng-controller="EventController as ctrl">
+<div class="form-group">
+<label>{{selectedEvent.event_id}}</label>
+<br>
+Posted By:<label>{{selectedEvent.user_name}}</label>
+on <label>{{selectedEvent.creation_date}}</label>
+<br>
+<br>
+<label>{{selectedEvent.event_title}}</label><br/><br/>
+<label>{{selectedEvent.info}}</label><br/><br/>
+
+<button type="button" ng-click="ctrl.applyForEvent(selectedEvent.event_id)" 
+class="btn btn-warning btn-sm">Apply for event</button>
+</div>
+</div>

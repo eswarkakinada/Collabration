@@ -1,0 +1,11 @@
+
+<div class="container" ng-controller="JobController as ctrl">
+Welcome to jobs
+ <div class="form-group"></div> 
+<p><input type="text" ng-model="job.ctrl.company"></p>
+
+<div ng-repeat="job in ctrl.jobs | filter:job.ctrl.company">
+<a href="#/view_job" ng-click="ctrl.getSelectedJob(job.jobid)">Title:{{job.jobtitle}}</a>
+</div>
+</div>
+

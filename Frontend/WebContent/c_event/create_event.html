@@ -1,0 +1,44 @@
+<div ng-controller="EventController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+
+<div ng-hide="currentUser==''">
+<div class="panel panel-default">
+<div class="panel heading">
+<span class="lead">Create your event</span>
+</div>
+<div class="formcontainer">
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable" for="eventname">EventTitile</label>
+<div class="col-md-7">
+<input type="text" width="100" height="50" ng-model="ctrl.event.eventname" id="eventname"
+class="form-control input-sm" placeholder="Name your event">
+</div>
+</div>
+</div>
+
+<br><br>
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable" for="description">info</label>
+<div class="col-md-7">
+<textarea rows="4" column="5" width="100" height="50" ng-model="ctrl.event.description" id="description"
+class="form-control input-sm" ></textarea>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Register" class="btn btn-primary btn-sm">
+<button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm">Reset Form</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>

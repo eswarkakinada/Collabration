@@ -1,0 +1,10 @@
+<div class="container" ng-controller="BlogController as ctrl">
+Welcome to blogs
+<div ng-repeat="blog in ctrl.blogs">
+<a href="#/view_blog" ng-click="ctrl.getSelectedBlog(blog.blog_id)">Title:{{blog.blog_title}}</a>
+</div>
+</div>
+
+<script src="app.js"></script>
+<script src="c_blog/BlogController.js"></script>
+ <script src="c_blog/BlogService.js"></script>

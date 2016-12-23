@@ -1,0 +1,34 @@
+<div class="container" ng-controller="UserController as ctrl">
+
+<p>
+<p>
+<p>
+<p>
+
+
+<p>
+<p>
+<p>
+<p>
+
+<div class="form-group has-feedback" >
+Search
+
+<p><input type="text" ng-model="user.ctrl.user_name"></p>
+
+<div ng-repeat="user in ctrl.users | filter:user.ctrl.user_name">
+
+<fieldset>
+
+<legend></legend>
+<p>Online? : {{user.isOnline}}
+
+<p>Name:{{user.user_name}} &nbsp;&nbsp;&nbsp;
+<button type="button" ng-click="ctrlr.sendFriendRequest(user.user_id)" class="btn btn-warning">Send Friend Request</button>
+</p>
+
+<p>Email: {{user.email}} &nbsp;&nbsp;&nbsp; Mobile:{{user.contact}}</p>
+</fieldset>
+</div>
+</div>
+</div>

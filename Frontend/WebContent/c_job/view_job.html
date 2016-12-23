@@ -1,0 +1,15 @@
+<div class="container" ng-controller="JobController as ctrl">
+<div class="form-group">
+<label>{{selectedJob.jobid}}</label>
+<br>
+Posted By:<label>{{selectedJob.userid}}</label>
+on <label>{{selectedJob.creationdate}}</label>
+<br>
+<br>
+<label>{{selectedJob.companyname}}</label>
+<label>{{selectedJob.details}}</label>
+
+<button type="button" ng-click="ctrl.applyForJob(selectedJob.jobid)" 
+class="btn btn-warning btn-sm">Apply for job</button>
+</div>
+</div>

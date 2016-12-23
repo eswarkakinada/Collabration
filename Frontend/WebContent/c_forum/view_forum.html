@@ -1,0 +1,15 @@
+<div class="container" ng-controller="ForumController as ctrl">
+<div class="form-group">
+<label>{{selectedForum.forum_id}}</label>
+<br>
+Posted By:<label>{{selectedForum.user_id}}</label>
+on <label>{{selectedForum.creation_date}}</label>
+<br>
+<br>
+<label>{{selectedForum.topic}}</label><br/><br/>
+<label>{{selectedForum.content}}</label><br/><br/>
+
+<button type="button" ng-click="ctrl.applyForForum(selectedForum.forum_id)" 
+class="btn btn-warning btn-sm">Apply for forum</button>
+</div>
+</div>
